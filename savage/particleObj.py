@@ -22,3 +22,12 @@ class Particle():
 		
 		p2x, p2y, p2z, p2mass = p2data
 		diff_x = p2x - self.x_pos
+		diff_y = p2y - self.y_pos
+		diff_z = p2z - self.z_pos
+		angle = ##Find direction angle in 3-dimensions##
+		distance = sqrt(diff_x**2 + diff_y**2 + diff_z**2)
+		if distance > 2:
+			acceleration = (self.grav*self.mass*p2mass)/distance
+			self.x_vel += acceleration * cos ##must finish##
+			
+			
