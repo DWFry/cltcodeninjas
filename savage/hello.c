@@ -2,6 +2,6 @@
 
 main() {
 int c;
-printf("hello Susan\n");
+printf("Hello World\n");
 c = getchar();
 } 
