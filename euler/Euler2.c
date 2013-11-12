@@ -3,8 +3,8 @@
 
 void main()
 {
-	long sum = 2;
-	long a[3] = { 0, 1, 2 };
+	long sum = 0;
+	long a[3] = { 0, 0, 1 };
 
 	while(a[2] < 4000000)
 	{
@@ -12,11 +12,9 @@ void main()
 		{
 			sum = sum + a[2];
  		}
-
 		a[0] = a[1];
 		a[1] = a[2];
 		a[2] = a[0] + a[1];
   	}
-
 	printf ("TOTAL = %d", sum);
 }
