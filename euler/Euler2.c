@@ -3,22 +3,27 @@
 
 void main()
 {
-		int sum, eventest;
-		int last3[3] = { 1, 2, 4 };
-		
-		while( sum <= 4000000)
+	unsigned int sum = 2;
+	unsigned int a[3] = { 0, 1, 2 };
+
+	while(a[2] < 4000000)
+	{
+		printf ("a[2] = %d", a[2]);
+
+		if(a[2] % 2 != 0)
 		{
-			last3[0] = last3[1];
-			last3[1] = last3[2];
-			last3[2] = last3[0] * last3[1];
+			sum = sum + a[2];
+ 			printf (" - O\n");
+ 		}
+ 		else
+ 		{
+ 			printf (" - E\n");
+ 		}
 
-			eventest = last3[2] % 1;
+		a[0] = a[1];
+		a[1] = a[2];
+		a[2] = a[0] + a[1];
+  	}
 
-			if(eventest == 0)
-			{
-				sum = sum + last3[2];
-			}
-		}
-
-		printf ("TOTAL = %d", sum);
+	printf ("TOTAL = %d", sum);
 }
