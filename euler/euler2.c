@@ -2,8 +2,8 @@
 
 void main()
 {
-	long sum = 0;
-	long a[3] = { 0, 0, 1 };
+	int sum = 0;
+	int a[3] = { 0, 0, 1 };
 
 	while(a[2] < 4000000)
 	{
