@@ -17,7 +17,7 @@ void main()
 	while( div1 <= max )
 	{
 		total = total + div1;
-		div1 = div1 + 3;
+		div1 = div1 + div1;
 	}
 		
 	while( div2 <= max )
@@ -26,7 +26,7 @@ void main()
 		{
 		total = total + div2;
 		}
-		div2 = div2 + 5;
+		div2 = div2 + div2;
 	}
 
 	printf ("TOTAL = %d", total);
