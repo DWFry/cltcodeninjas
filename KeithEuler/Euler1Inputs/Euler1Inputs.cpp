@@ -5,7 +5,7 @@
 
 void main()
 {
-	int total = 0, div1 = 3, div2 = 5, max = 999;
+	int total = 0, div1count = 0, div2count = 0, div1 = 0, div2 = 0, max = 0;
 		
 	printf("Enter first divisor: ");
 	scanf_s("%d",&div1);
@@ -16,21 +16,22 @@ void main()
 	printf("Enter range max: ");
 	scanf_s("%d",&max);
        
-	while( div1 <= max )
+	while( div1count < max )
 	{
-		total = total + div1;
-		div1 = div1 + div1;
+		total = total + div1count;
+		div1count = div1count + div1;
 	}
 		
-	while( div2 <= max )
+	while( div2count < max )
 	{
-		if( div2 % 3 != 0 )
+		if( div2count % div1 != 0 )
 		{
-		total = total + div2;
+		total = total + div2count;
 		}
-		div2 = div2 + div2;
+		div2count = div2count + div2;
 	}
 
 	printf ("TOTAL = %d", total);
 	printf ("\n");
+	printf("Press Enter to continue");
 }
